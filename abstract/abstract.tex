@@ -1,0 +1,67 @@
+\documentclass[11pt,A4]{IGAA2018_Abstract}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\thispagestyle{empty}
+
+\title{Fast Divergence-Conforming Reduced Basis Methods for steady Navier-Stokes Flow}
+
+\author{
+  Eivind Fonn$^{*}$, Harald v.~Brummelen$^{\dagger}$,
+  Trond Kvamsdal$^{\mathsection\ddagger}$, Adil Rasheed$^{\mathsection}$,
+  Muhammad S.~Siddiqui$^{\ddagger}$
+}
+
+\address{$^{\mathsection}$ Department of Applied Mathematics and Cybernetics\\
+SINTEF Digital\\
+PO Box 4760, 7465 Trondheim, Norway\\
+$^{*}$ e-mail: eivind.fonn@sintef.no, web page: http://www.sintef.no
+\and
+$^{\dagger}$ Department of Mechanical Engineering\\
+Eindhoven University of Technology\\
+PO Box 513, 5600 MB Eindhoven, The Netherlands
+\and
+$^{\ddagger}$ Department of Mathematical Sciences\\
+Norwegian University of Science and Technology\\
+Institutt for Matematiske Fag, NTNU, 7491 Trondheim, Norway}
+
+\begin{document}
+
+Numerical methods and tools for simulating flow around complex
+geomeries have evolved rapidly in recent years. However, their usage
+usually requires access to high-performance computing facilities,
+which is not always feasible. New methods are required for an
+ever-increasing demand for computationally efficient desktop tools
+usable in real-time control, optimization and management. One such
+solution is dimensionality reduction through Reduced Order Modelling
+(ROM) based on Proper Orthogonal Decomposition
+(POD).\cite{Quarteroni2016rbm}
+
+We detail in this work an experiment involving two-dimensional
+stationary flow around a NACA0015 airfoil at various velocities and
+angles of attack. Two different methods are proposed: a
+run-of-the-mill reduced basis method based on a conventional
+Taylor-Hood high-fidelity solver, and one based on a
+divergence-conforming isogeometric flow solver. The reduced bases were
+constructed with POD and enhanced with
+supremizers\cite{Ballarin2015ssp} to stabilize the pressure field. We
+show how the latter method produces a fully divergence-free reduced
+basis, and how this property influences the linear systems by creating
+three-by-three block triangular matrices, a structure that can be
+exploited for significant speedups over the traditional matrix
+structure arising from the regular method.
+
+\begin{thebibliography}{99}
+  \bibitem{Quarteroni2016rbm} A.~Quarteroni, A.~Manzoni, and F.~Negri,
+    “Reduced Basis Methods for Partial Differential Equations”,
+    \textit{Springer International Publishing}, 1st Edition (2016).
+  \bibitem{Ballarin2015ssp} F.~Ballarin, A.~Manzoni, A.~Quarteroni,
+    and G.~Rozza, “Supremizer stabilization of POD-Galerkin
+    approximation of parametrized steady incompressible Navier Stokes
+    equations”, \textit{Int.~J.~Numer.~Meth.~Engng.},
+    Vol.~\textbf{102}, pp.~1136--1161 (20125).
+\end{thebibliography}
+
+\end{document}
