@@ -1,0 +1,3 @@
+[submodule "pres/common"]
+	path = pres/common
+	url = git@github.com:TheBB/latex-common

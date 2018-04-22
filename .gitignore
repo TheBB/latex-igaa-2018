@@ -3,3 +3,8 @@
 *.log
 *.fls
 *.fdb_latexmk
+*.nav
+*.out
+*.snm
+*.toc
+/pres/pres.pdf
