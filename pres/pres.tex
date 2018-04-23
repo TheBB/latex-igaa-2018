@@ -55,15 +55,19 @@
   \titlepage
 \end{frame}
 
-% \begin{frame}
-%   \frametitle{Outline}
-%   \begin{enumerate}
-%   \item Basic idea of ROM
-%   \item ROM in practice
-%   \item Backwards-facing step channel
-%   \item Divergence-free function spaces
-%   \end{enumerate}
-% \end{frame}
+\begin{frame}
+  \frametitle{Outline}
+  \begin{enumerate}
+  \item Motivation of RBMs
+  \item How RBMs are built, offline-online distinction
+  \item Affine representations (the catch)
+  \item Pretty pictures (backwards-facing step channel)
+  \item Where divergence-conformity enters into it
+  \item Pressure reconstruction
+  \item Flow around NACA0015 airfoil
+  \item Summary
+  \end{enumerate}
+\end{frame}
 
 \begin{frame}
   \frametitle{Parameter-dependent models}
@@ -789,14 +793,16 @@
   \end{center}
 \end{frame}
 
-% \begin{frame}
-%   \frametitle{Summary}
-%   \begin{itemize}
-%   \item Reduced order models can offer dramatic speed-ups for certain applications.
-%   \item They combine nicely with IGA and div-compatible spaces to form fully
-%     divergence-free function spaces without need for pressure fields.
-%   \end{itemize}
-%   ~\\ \begin{center} Thanks! \end{center}
-% \end{frame}
+\begin{frame}
+  \frametitle{Summary}
+  \begin{itemize}
+  \item Reduced order models can offer dramatic speed-ups for certain applications.
+  \item They combine nicely with IGA and div-compatible spaces to form fully
+    divergence-free function spaces without need for pressure fields.
+  \item Divergence-free RBMs can be much faster than other RBMs, in spite of additional complexity
+    in the offline stage (remember, all is fair there.)
+  \end{itemize}
+  ~\\ \begin{center} Thanks! \end{center}
+\end{frame}
 
 \end{document}
